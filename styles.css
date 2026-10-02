@@ -1,0 +1,353 @@
+/* ==========================================================================
+   HEMA N - PORTFOLIO STYLES
+   High-end Dark Glassmorphic & Cyber-Modern Aesthetic
+   ========================================================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 2px solid #090d16;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(13, 18, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(22, 29, 47, 0.6) 0%, rgba(13, 17, 28, 0.75) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 10px 35px -10px rgba(59, 130, 246, 0.2);
+}
+
+/* Section Common Styling */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Underline glow for main hero title */
+.underline-glow {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-glow::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  border-radius: 9999px;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+}
+
+/* Cursor Blink Animation */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Social & Meta Pills */
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #cbd5e1;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.social-pill:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(96, 165, 250, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Metric / Counter Cards */
+.metric-card {
+  padding: 1.25rem 1rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Soft Skills Item */
+.skill-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+/* Technical Skill Card */
+.skill-card {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.skill-card:hover {
+  background: rgba(22, 31, 55, 0.7);
+  border-color: rgba(96, 165, 250, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
+}
+
+/* Filter buttons */
+.skill-filter-btn {
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.75rem;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.skill-filter-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skill-filter-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Tech tag pills inside project */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.6rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e2e8f0;
+}
+
+/* Timeline card */
+.timeline-card {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.timeline-card:hover {
+  border-color: rgba(251, 191, 36, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -10px rgba(245, 158, 11, 0.15);
+}
+
+/* Terminal command buttons */
+.cmd-pill {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  transition: all 0.15s ease;
+}
+
+.cmd-pill:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: scale(1.03);
+}
+
+/* Form input styling */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.form-input::placeholder {
+  color: #64748b;
+}
+
+/* Modal Animations */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease forwards;
+}
+
+/* Print Stylesheet for Resume PDF generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  
+  #particleCanvas,
+  header,
+  footer,
+  #hero,
+  #about,
+  #skills,
+  #projects,
+  #experience,
+  #education,
+  #certifications,
+  #contact,
+  form,
+  button {
+    display: none !important;
+  }
+
+  #resumeModal {
+    position: static !important;
+    display: block !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  #resumeModal > div {
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+  }
+
+  #resumeModal .border-b,
+  #resumeModal .border-t {
+    border-color: #e5e7eb !important;
+  }
+
+  #cvPrintableArea {
+    color: #1f2937 !important;
+  }
+
+  #cvPrintableArea h1,
+  #cvPrintableArea h3,
+  #cvPrintableArea strong {
+    color: #111827 !important;
+  }
+
+  #cvPrintableArea .text-cyan-400,
+  #cvPrintableArea .text-cyan-300 {
+    color: #0284c7 !important;
+  }
+
+  #cvPrintableArea .text-slate-300,
+  #cvPrintableArea .text-slate-400 {
+    color: #4b5563 !important;
+  }
+}
